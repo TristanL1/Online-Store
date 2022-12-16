@@ -1,0 +1,9 @@
+<% @temp = Product.find(params[:product]) %>
+<div class="block">
+    <%= image_tag(@temp.image) %>
+    <h3 class="entry"><%= @temp.name %></h3>
+        <p class="desc"><%= @temp.description %></p><br><br> 
+        <b class="price">$<%= @temp.price %></b>
+        <%= button_to "Add to Cart", lineitems_path(product_id: @temp), remote: true, class: "add" %>
+        <br><br>
+</div>

@@ -1,0 +1,84 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* START_HIGHLIGHT */
+.desc {
+  font-size:150%;
+  font-family: Monaco;
+}
+
+h1 {
+  margin: 0;
+  padding-bottom: 0.5em;
+  font:  250% sans-serif;
+  color: #226;
+  border-bottom: 3px solid #77d;
+  font-weight: bold;
+}
+
+.entry {
+  overflow: auto;
+  margin-top: 1em;
+  border-bottom: 1px solid #77d;
+  min-height: 50px;
+  font-size: 150%;
+}
+.price {
+	font-size: 135%;
+}
+
+.block {
+	border-bottom: 3px solid #77d;
+	margin-top: 50px;
+}
+
+
+.products {
+  table {
+      border-collapse: collapse;
+        }
+
+  table tr td {
+      padding: 5px;
+          vertical-align: center;
+	    }
+
+  .list_image {
+      width:  90px;
+          height: 110px;
+	    }
+
+  .list_description {
+      width: 80%;
+
+    dl {
+          margin: 0;
+	      }
+
+    dt {
+          color:        #244;
+	        font-weight:  bold;
+		      font-size:    larger;
+		          }
+
+    dd {
+          margin: 0;
+	      }
+	        }
+
+  .list_actions {
+      font-size:    x-small;
+          text-align:   right;
+	      padding-left: 1em;
+	        }
+
+  .list_line_even {
+      background:   #e1e1e1;
+        }
+
+  .list_line_odd {
+      background:   #e6cced;
+        }
+		}
+	/* END_HIGHLIGHT */
+	

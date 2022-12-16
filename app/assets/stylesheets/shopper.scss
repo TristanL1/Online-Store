@@ -1,0 +1,84 @@
+// Place all the styles related to the shopper controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.add {
+	background-color: #ebcc34;
+	border: none;
+	color: black;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 15px;
+}
+
+.add:hover {
+	background-color: #ccb12d;
+  	color: black;
+}
+
+.price {
+	font-size: 135%;
+}
+
+.block {
+	border-bottom: 3px solid #77d;
+	margin-top: 50px;
+}
+
+
+
+/* START_HIGHLIGHT */
+.shopper {
+   h1 {
+         margin: 0;
+     	      padding-bottom: 0.5em;
+          font:  250% sans-serif;
+	          color: #226;
+		      border-bottom: 3px solid #77d;
+			  font-weight: bold;
+		        }
+
+  /* An entry in the store catalog */
+      .entry {
+        overflow: auto;
+	    margin-top: 1em;
+	        border-bottom: 1px solid #77d;
+		    min-height: 50px;
+		font-size: 150%;
+
+    img {
+          width: 80px;
+	        margin-right: 5px;
+		      margin-bottom: 5px;
+		            position: absolute;
+			        }
+
+    h3 {
+          font-size: 120%;
+	        font-family: sans-serif;
+		      margin-left: 100px;
+		            margin-top: 0;
+			          margin-bottom: 2px;
+				        color: #227;
+					    }
+
+    p, div.price_line {
+          margin-left: 100px;
+	        margin-top: 0.5em;
+		      margin-bottom: 0.8em;
+		          }
+
+    .price {
+          color: #44a;
+	        font-weight: bold;
+		      margin-right: 3em;
+		          }
+			    }
+			    }
+			    /* END_HIGHLIGHT */

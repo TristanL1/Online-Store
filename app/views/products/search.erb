@@ -1,0 +1,12 @@
+<h1>Search Results:</h1>
+
+<% @productresult.each do |product| %>
+<div class="block">
+    <%= image_tag(product.image) %>
+    <h3 class="entry"><%= product.name %></h3>
+        <p class="desc"><%= product.description %></p><br><br>
+        <b class="price">$<%= product.price %></b>
+        <%= button_to "Add to Cart", lineitems_path(product_id: product, class: "add_to_cart"), remote: true, class: "add" %>
+        <br><br>
+</div>
+<% end %>

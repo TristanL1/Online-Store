@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework4</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class='<%= controller.controller_name %>'>
+    <div id='banner'>
+      <%= link_to image_tag("logo.png", class: "logo"), shopper_url %>
+      <%= @page_title || "Official HyperX Products" %>
+      <% if session[:user_id] %>
+        <div id="login"><%= link_to 'LOGOUT', logout_path, method: :delete, class: 'button' %></div>
+      <% else %>
+        <div id="login"><%= link_to 'LOGIN', login_path, class: 'button' %></div>
+      <% end %>
+      <form action='/search'>
+        <input id="search_bar" type='text' placeholder='Search for product name or description...' name='q'>
+        <button class="search" id="search_button" type='submit'>Search</button>
+      </form>
+
+    </div>
+
+    <div id='columns'>
+      <div id='side'>
+        <div id='cart'>
+        <%= render @cart %> <%# look for _cart.html.erb %>
+        </div>
+        <% if session[:user_id] %>
+          <ul>
+            <li><%= link_to 'Orders', orders_path %></li>
+            <li><%= link_to 'Products', products_path %></li>
+            <li><%= link_to 'Users', users_path %></li>
+          </ul>
+          <%= button_to 'Logout', logout_path, method: :delete %>
+        <% end %>
+      </div>
+      <div id='main'>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
